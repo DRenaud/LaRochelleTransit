@@ -106,10 +106,11 @@ otp.config = {
      * properties, when set, override that behavioir.
      */
      
-    // initLatLng : new L.LatLng(<lat>, <lng>),
-    // initZoom : 14,
-    // minZoom : 10,
-    // maxZoom : 20,
+    //Modifications de l'emplacement 
+    initLatLng : new L.LatLng(46.1393719, -1.1130881),
+    initZoom : 15,
+    minZoom : 10,
+    maxZoom : 20,
     
     /* Whether the map should be moved to contain the full itinerary when a result is received. */
     zoomToFitResults    : false,
