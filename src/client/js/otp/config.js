@@ -154,7 +154,11 @@ otp.config = {
         {
             id : 'analyst',
             className : 'otp.modules.analyst.AnalystModule'
-        }
+        },
+        {
+    	    id : 'bikeshare',
+    	    className : 'otp.modules.bikeshare.BikeShareModule',
+    	}
     ],
     
     
