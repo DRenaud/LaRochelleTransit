@@ -108,7 +108,7 @@ otp.config = {
      
     //Modifications de l'emplacement 
     initLatLng : new L.LatLng(46.1393719, -1.1130881),
-    initZoom : 15,
+    initZoom : 12,
     minZoom : 10,
     maxZoom : 20,
     
@@ -119,15 +119,15 @@ otp.config = {
      * Site name / description / branding display options
      */
 
-    siteName            : "My OTP Instance",
-    siteDescription     : "An OpenTripPlanner deployment.",
-    logoGraphic         : 'images/otp_logo_darkbg_40px.png',
-    // bikeshareName    : "",
+    siteName            : "Yelo",
+    siteDescription     : "Calculateur d'itinéraire modal sur l'agglo de La Rochelle.",
+    logoGraphic         : 'images/logo-yelo-otp-60.png',
+     bikeshareName    : "Vélo Yelo",
     //Enable this if you want to show frontend language chooser
     showLanguageChooser : true,
 
     showLogo            : true,
-    showTitle           : true,
+    showTitle           : false, // Logo parle bien seul
     showModuleSelector  : true,
     metric              : false,
 
