@@ -16,7 +16,7 @@ otp.namespace("otp.layers");
 
 var StopIcon20 = L.Icon.extend({
     options: {
-        iconUrl: resourcePath + 'images/stop20.png',
+        iconUrl: resourcePath + 'images/busstop.png',
         shadowUrl: null,
         iconSize: new L.Point(20, 20),
         iconAnchor: new L.Point(10, 10),
