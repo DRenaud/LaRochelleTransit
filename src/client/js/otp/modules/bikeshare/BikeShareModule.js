@@ -229,7 +229,7 @@ otp.modules.bikeshare.BikeShareModule =
                 this.setStationMarker(station, _tr("ALTERNATE DROP OFF"), icon);
             }
             else {
-                icon = icon || this.icons.getSmall(stationData);
+                icon = icon || this.icons.getVelo(stationData); // Icon perso de Yelo
                 // TRANSLATORS: Popup title Bike sharing station
                 this.setStationMarker(station, _tr("BIKE STATION"), icon);
             }

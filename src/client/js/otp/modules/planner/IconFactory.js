@@ -140,6 +140,64 @@ var SmallIcon100Pct = L.Icon.extend({
 });
 
 
+// Yelo
+
+
+var VeloYelo0Pct = L.Icon.extend({
+    options: {
+        iconUrl: resourcePath + 'images/flexbike-1000.png',
+        shadowUrl: null,
+        iconSize: new L.Point(43, 50),
+        iconAnchor: new L.Point(21, 45),
+        popupAnchor: new L.Point(0, -8)
+    }
+});
+
+var VeloYelo25Pct = L.Icon.extend({
+    options: {
+        iconUrl: resourcePath + 'images/flexbike-750.png',
+        shadowUrl: null,
+        iconSize: new L.Point(43, 50),
+        iconAnchor: new L.Point(21, 45),
+        popupAnchor: new L.Point(0, -8)
+    }
+});
+
+var VeloYelo50Pct = L.Icon.extend({
+    options: {
+        iconUrl: resourcePath + 'images/flexbike-500.png',
+        shadowUrl: null,
+        iconSize: new L.Point(43, 50),
+        iconAnchor: new L.Point(21, 45),
+        popupAnchor: new L.Point(0, -8)
+    }
+});
+
+var VeloYelo75Pct = L.Icon.extend({
+    options: {
+        iconUrl: resourcePath + 'images/flexbike-250.png',
+        shadowUrl: null,
+        iconSize: new L.Point(43, 50),
+        iconAnchor: new L.Point(21, 45),
+        popupAnchor: new L.Point(0, -8)
+    }
+});
+
+var VeloYelo100Pct = L.Icon.extend({
+    options: {
+        iconUrl: resourcePath + 'images/flexbike-0.png',
+        shadowUrl: null,
+        iconSize: new L.Point(43, 50),
+        iconAnchor: new L.Point(21, 45),
+        popupAnchor: new L.Point(0, -8)
+    }
+});
+
+
+
+
+
+
 var MediumIcon0Pct = L.Icon.extend({
     options: {
         iconUrl: resourcePath + 'images/marker-med-0pct.png',
@@ -259,6 +317,15 @@ otp.modules.planner.IconFactory = otp.Class({
     small50 : new SmallIcon50Pct(),
     small75 : new SmallIcon75Pct(),
     small100 : new SmallIcon100Pct(),
+    
+    //Yelo
+    
+    velo0 : new VeloYelo0Pct(),
+    velo25 : new VeloYelo25Pct(),
+    velo50 : new VeloYelo50Pct(),
+    velo75 : new VeloYelo75Pct(),
+    velo100 : new VeloYelo100Pct(),
+    
 
     medium0 : new MediumIcon0Pct(),
     medium25 : new MediumIcon25Pct(),
@@ -287,6 +354,17 @@ otp.modules.planner.IconFactory = otp.Class({
         if(pct >= this.upperCutoff) return this.small75;
         return this.small50;
     },   
+    
+    
+    //Yelo
+    getVelo : function(station) {
+        var pct =  station.bikesAvailable / (station.bikesAvailable + station.spacesAvailable);
+        if(pct == 0) return this.velo0;
+        if(pct == 1) return this.velo100;
+        if(pct <= this.lowerCutoff) return this.velo25;
+        if(pct >= this.upperCutoff) return this.velo75;
+        return this.velo50;
+    },
 
     getMedium : function(station) {
         var pct =  station.bikesAvailable / (station.bikesAvailable + station.spacesAvailable);
