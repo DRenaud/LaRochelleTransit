@@ -361,8 +361,8 @@ otp.modules.planner.IconFactory = otp.Class({
         var pct =  station.bikesAvailable / (station.bikesAvailable + station.spacesAvailable);
         if(pct == 0) return this.velo0;
         if(pct == 1) return this.velo100;
-        if(pct <= this.lowerCutoff) return this.velo25;
-        if(pct >= this.upperCutoff) return this.velo75;
+        if(pct <= 0.25) return this.velo25;
+        if(pct >= 0.75) return this.velo75;
         return this.velo50;
     },
 
