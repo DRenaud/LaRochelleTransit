@@ -14,13 +14,18 @@
 
 otp.namespace("otp.layers");
 
+
+
+/**
+ * Paramétrage des icones de bus à la Yélo
+ */
 var StopIcon20 = L.Icon.extend({
     options: {
         iconUrl: resourcePath + 'images/busstop.png',
         shadowUrl: null,
-        iconSize: new L.Point(20, 20),
-        iconAnchor: new L.Point(10, 10),
-        popupAnchor: new L.Point(0, -5)
+        iconSize: new L.Point(38, 55),
+        iconAnchor: new L.Point(19, 50),
+        popupAnchor: new L.Point(19, -5)
     }
 });
 
