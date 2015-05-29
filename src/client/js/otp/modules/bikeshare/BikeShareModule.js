@@ -270,7 +270,7 @@ otp.modules.bikeshare.BikeShareModule =
     addStationMarker : function(station, title, icon) {
         var stationData = station.toJSON(),
             marker;
-        icon = icon || this.icons.getSmall(stationData);
+        icon = icon || this.icons.getVelo(stationData);
         
         //console.log(station);
         marker = new L.Marker(new L.LatLng(stationData.y, stationData.x), {icon: icon});
@@ -291,7 +291,7 @@ otp.modules.bikeshare.BikeShareModule =
     updateStationMarker : function(marker, station, title, icon) {
         var stationData = station.toJSON();
         
-        marker.setIcon(icon || this.icons.getSmall(stationData));
+        marker.setIcon(icon || this.icons.getVelo(stationData));
 
         marker.bindPopup(this.constructStationInfo(title, stationData));
     },
