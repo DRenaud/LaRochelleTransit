@@ -79,23 +79,27 @@ otp.config = {
             subdomains : ['otile1','otile2','otile3','otile4'],
             attribution : 'Data, imagery and map information provided by <a href="http://open.mapquest.com" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
         },
-        {
-            name: 'MapQuest Aerial',
-            tileUrl: 'http://{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png',
-            subdomains : ['otile1','otile2','otile3','otile4'],
-            attribution : 'Data, imagery and map information provided by <a href="http://open.mapquest.com" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
-        },
+//        {
+//            name: 'MapQuest Aerial',
+//            tileUrl: 'http://{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.png',
+//            subdomains : ['otile1','otile2','otile3','otile4'],
+//            attribution : 'Data, imagery and map information provided by <a href="http://open.mapquest.com" target="_blank">MapQuest</a>, <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.'
+//        },
         {
             name: 'Conveyal Tiles',
             tileUrl: 'http://a.tiles.mapbox.com/v3/conveyal.hml987j0/{z}/{x}/{y}.png',
             attribution: 'Data from <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors. Tiles from MapBox.</a>'
-        }
-//            	,
-//        {
-//        	name:'Test',
-//        	tileUrl:'http://',
-//        	attribution : 'Data from <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors. Tiles from MapBox.</a>'
-//        }
+        },
+        {
+        	name:'Pirates',
+        	tileUrl:'http://api.tiles.mapbox.com/v4/mapbox.pirates/{z}/{x}/{y}.png?access_token=sk.eyJ1IjoiZHJlbmF1ZCIsImEiOiI0bGx3M1VBIn0.LjyulPRGj1irQOu1LuIFlg',
+        	attribution : 'Data from <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors. Tiles from MapBox.</a>'
+        },
+                {
+                	name:'Sattelite',
+                	tileUrl:'http://api.tiles.mapbox.com/v4/mapbox.streets-satellite/{z}/{x}/{y}.png?access_token=sk.eyJ1IjoiZHJlbmF1ZCIsImEiOiI0bGx3M1VBIn0.LjyulPRGj1irQOu1LuIFlg',
+                	attribution : 'Data from <a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors. Tiles from MapBox.</a>'
+                }
         
     ],
     
@@ -113,7 +117,7 @@ otp.config = {
     maxZoom : 20,
     
     /* Whether the map should be moved to contain the full itinerary when a result is received. */
-    zoomToFitResults    : false,
+    zoomToFitResults    : true,
 
     /**
      * Site name / description / branding display options
@@ -146,7 +150,7 @@ otp.config = {
     
     modules : [
         {
-            id : 'planner',
+            id : 'modulePlanner',
             className : 'otp.modules.multimodal.MultimodalPlannerModule',
             defaultBaseLayer : 'MapQuest OSM',
             isDefault: true
@@ -326,7 +330,7 @@ otp.config.modes = {
     //uncomment only if bike rental exists in a map
     // TODO: remove this hack, and provide code that allows the mode array to be configured with different transit modes.
     //       (note that we've been broken for awhile here, since many agencies don't have a 'Train' mode either...this needs attention)
-    // IDEA: maybe we start with a big array (like below), and the pull out modes from this array when turning off various modes...
+   // IDEA: maybe we start with a big array (like below), and the pull out modes from this array when turning off various modes...
     //TRANSLATORS: Travel by: mode of transport (Used in selection in Travel
     //Options widgets)
     "WALK,BICYCLE_RENT"        :_tr('Rented Bicycle'),
