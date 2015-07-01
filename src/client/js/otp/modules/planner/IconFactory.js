@@ -356,7 +356,7 @@ otp.modules.planner.IconFactory = otp.Class({
     //Yelo
     getVelo : function(station) {
         var pct =  station.bikesAvailable / (station.bikesAvailable + station.spacesAvailable);
-        if(bikesAvailable == 0) return this.velo0; //Mise a jour de la condition
+        if(station.bikesAvailable == 0) return this.velo0; //Mise a jour de la condition
         if(pct == 1) return this.velo100;
         if(pct <= 0.25) return this.velo25;
         if(pct >= 0.75) return this.velo75;

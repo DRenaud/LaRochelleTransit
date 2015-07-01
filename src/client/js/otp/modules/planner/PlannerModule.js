@@ -121,7 +121,7 @@ otp.modules.planner.PlannerModule =
 
 
 
-    //templateFile : 'otp/modules/planner/planner-templates.html',
+    templateFile : 'otp/modules/planner/planner-templates.html',
 
     initialize : function(webapp, id, options) {
         otp.modules.Module.prototype.initialize.apply(this, arguments);

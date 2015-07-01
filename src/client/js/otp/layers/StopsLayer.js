@@ -34,7 +34,7 @@ otp.layers.StopsLayer =
 
     module : null,
 
-    minimumZoomForStops : 15,
+    minimumZoomForStops : 17,
 
     initialize : function(module) {
         var this_ = this;
